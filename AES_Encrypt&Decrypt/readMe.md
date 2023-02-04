@@ -31,3 +31,14 @@ resulting character is then added to the decrypted text string. If the character
 number, its value is shifted. If the character is an em dash (a double dash --), it may 
 be represented as €” in Python, and an if statement with € or ” is used to convert it 
 to a dash (-). Any other characters are simply added to the decrypted text string.
+
+
+## Sample output:
+
+
+![Plain English letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture1.png?raw=true)
+![Plain English letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture2.png)
+
+
+![Cipher letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture3.png)
+![Cipher letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture4.png)

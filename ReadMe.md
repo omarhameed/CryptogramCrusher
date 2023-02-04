@@ -21,12 +21,3 @@ This program calculates a checksum for a string taken from a text file and
 tries to crack it by using a different string of characters with the same checksum.
 
 
-## Sample output:
-
-
-![Plain English letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture1.png?raw=true)
-![Plain English letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture2.png)
-
-
-![Cipher letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture3.png)
-![Cipher letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture4.png)
