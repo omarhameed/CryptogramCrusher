@@ -1,44 +1,26 @@
-# Libraries to Download:
-- pip install pycrypto
-- pip install aes-pkcs5
+# Packages To install
+pip install pandas
+pip install matplotlib
+pip install sklearn
 
-## CreateDF
-The `CreateDF` function is used to produce a data frame using the pandas library 
-and sorts their values in ascending order. This function’s purpose is to analyze 
-the frequency of letters in the text data. The result of the sorting is saved to a 
-CSV file for further analysis. The function returns the most used letter in the data.
+# Program Description
+In this program a message is read from `SecureMessage.txt` as a string and encrypted using the AES-128 method. It follows the following steps:
 
-## PlotBarGraph
-The `PlotBarGraph` function uses the `matplotlib.pyplot` library to create a bar 
-graph of the letter frequency analysis. This function allows for a visual representation 
-of the data. The `plt.clf` function is also used to clear any plotted data once it has 
-been saved, avoiding overlapping results on subsequent runs of the function. 
+## GetMessage()
+1) This function reads a plain English message from the input file and returns the message as a string in byte format. The message is returned in bytes, because the encryption function AES.encrypt() must have the parameter type in bytes.
+The message is then padded using pad(message) in order to make the message have a size of 16 bytes. This is because AES uses 128 bit-block size data.
 
-## Main Function
-The main function calls both `CreateDF` and `PlotBarGraph` functions twice, once for 
-the cipher text and once for a plain English text article. The purpose is to compare 
-the letter frequency in both texts. The most used letter in both functions is then 
-cross-referenced using the `CrackCipher` function. This function sets the decryption 
-key equal to the difference between the Unicode values of the most used cipher letter 
-and the most used English letter. 
+2) The `Encrypt message` function then takes an argument, padded message as bytes. An AES is then created and used to call the function `encrypt`, which returns an AES-128 encrypted message. This message is returned as a string type, which will then be reversed in the decryption process.
 
-The decryption process happens by iterating through each letter in the cipher text with 
-a for loop and a series of if statements. The five possibilities considered are: capital 
-letter, lower letter, digit, em dash, or other characters. If the letter is a lower or 
-capital letter, its position is calculated relative to the letter A or a, and then the 
-character is shifted to the left by the key positions to get its original position. The 
-resulting character is then added to the decrypted text string. If the character is a 
-number, its value is shifted. If the character is an em dash (a double dash --), it may 
-be represented as €” in Python, and an if statement with € or ” is used to convert it 
-to a dash (-). Any other characters are simply added to the decrypted text string.
+## SaveEncrypt function
+This function takes in two arguments, the encrypted message and the directory to store the encrypted message in. If the directory inputted does not exist, then the program terminates. 
 
+# Decryption
+The `receive.py` program reads an encrypted message stored in `AES-128.dat` and then decrypts the message and unpads the added values. It then saves it as "`DecryptedMessage.txt`".
 
-## Sample output:
+The `GetMessage` function reads the message as a string, which is then converted to bytes in order to be the correct format for the `Decrypt` function. The base64 data is decoded using the `b64decode` function and the output is decrypted using the `AES.decrypt` function. The decrypted output is unpadded from the added values, the total block size of the string is `BLOCK_SIZE = 16 Bytes`. The function then returns a string value.
 
+`SaveDecrypt()` writes the output value to a text file `DecryptedMessage.txt`.
 
-![Plain English letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture1.png?raw=true)
-![Plain English letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture2.png)
-
-
-![Cipher letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture3.png)
-![Cipher letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture4.png)
+# Additional Information
+Both programs above, `receive.py` and `send.py`, contain the function `GetFilePath` which is only used as a sanity check. It looks for the argument file name in all the sub-directories in case the order of the files is altered after installation.
