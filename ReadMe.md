@@ -10,14 +10,11 @@ the alphabet used.
 
 Sample output:
 
+![Plain English letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture1.png?raw=true){width=300 height=200}
+![Plain English letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture2.png){width=300 height=200}
 
-![Plain English letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture1.png?raw=true)
-![Plain English letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture2.png)
-
-
-![Cipher letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture3.png)
-![Cipher letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture4.png)
-
+![Cipher letter frequncy graph](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture3.png){width=300 height=200}
+![Cipher letter frequncy table](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture4.png){width=300 height=200}
 
 # AES Encrypt
 This program is used to encrypt a message in a file named `SecureMessage.txt` 
