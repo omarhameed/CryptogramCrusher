@@ -9,10 +9,12 @@ was calculated and they were aligned together, in order to calculate the shift o
 the alphabet used.
 
 Sample output:
-![Plain English letter frequncy (SampleOutput\Picture1.png)
+![Plain English letter frequncy (https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture1.png)
 ![Caption](file:///<absolute-path-to-file>)
 ![Caption](file:///<absolute-path-to-file>)
 ![Caption](file:///<absolute-path-to-file>)
+
+![alt text](https://github.com/omarhameed/EncryptionMethods/blob/main/Cipher%20Decrypter/SampleOutput/Picture1.png)
 
 # AES Encrypt
 This program is used to encrypt a message in a file named `SecureMessage.txt` 
